@@ -21,5 +21,10 @@ pipeline {
                 sh 'mvn install'
             }
         }
+        stage('Run') { 
+            steps {
+                sh 'mvn jetty:run'
+            }
+        }
     }
 }
