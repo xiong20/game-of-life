@@ -16,9 +16,9 @@ pipeline {
                 sh 'mvn test' 
             }
         }
-        stage('Deploy') { 
+        stage('Delivery') { 
             steps {
-                sh 'mvn jetty:run'
+                sh 'mvn install'
             }
         }
     }
